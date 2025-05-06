@@ -1,0 +1,40 @@
+<div class="resume-container">
+
+  <div class="header-section">
+    <div class="profile-photo">
+      <img [src]="photoUrl" alt="Photo">
+    </div>
+
+    <div class="name-and-links">
+      <h1 style="color: darkolivegreen;">{{name}}</h1>
+      <div class="social-links">
+        <a href="{{githubUrl}}" target="_blank" class="git">
+          <i class="fa fa-github git"></i> GitHub
+        </a>
+        <a href="{{linkedinUrl}}" target="_blank">
+          <i class="fa fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button class="buttonBI" (click)="onShowModalBasicInf()">Basic Info</button>
+    <button class="buttonS" (click)="onShowModalSkills()">Skills</button>
+    <button class="buttonP" (click)="onShowModalProjects()">Projects</button>
+  </div>
+
+  <app-basic-info-modal
+  [showModal]="showModalBasicInf"
+  (closeModal)="onCloseModalBasicInf()"
+  ></app-basic-info-modal>
+  <app-skills-modal
+  [showModal]="showModalSkills"
+  (closeModal)="onCloseModalSkills()"
+  ></app-skills-modal>
+  <app-projects-modal
+  [showModal]="showModalProjects"
+  (closeModal)="onCloseModalProjects()"
+  ></app-projects-modal>
+
+</div>

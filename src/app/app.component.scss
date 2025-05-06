@@ -1,0 +1,156 @@
+.profile-photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* Hace que la imagen sea un círculo */
+  object-fit: cover;
+  /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+//-------------------------------------
+
+.resume-container {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+// ---------------------------------
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #1565c0;
+  font-weight: bold;
+}
+
+.social-links a.git {
+  color: black;
+}
+
+//--------------------------------------
+
+.header-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+//--------------------------------------
+
+.name-and-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-and-links h1 {
+  margin-bottom: 0px;
+}
+
+.git {
+  color: black;
+}
+
+//------------------------------------------
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+//------------------------------------------
+
+.buttonBI {
+  background-color: white;
+  color: #1e9517;
+  border: 2px solid #1e9517;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-colo 0.3 ease, transform 0.2 ease;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttonBI:hover {
+  background-color: #1e9517;
+  color: white;
+  transform: translateY(-2px)
+}
+
+.buttonBI:active {
+  transform: translateY(0);
+  background-color: #157a12;
+}
+
+// ---------------------------------------
+
+.buttonS {
+  background-color: white;
+  color: #a227be;
+  border: 2px solid #a227be;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-colo 0.3 ease, transform 0.2 ease;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttonS:hover {
+  background-color: #a227be;
+  color: white;
+  transform: translateY(-2px)
+}
+
+.buttonS:active {
+  transform: translateY(0);
+  background-color: #831d9a;
+}
+
+// ----------------------------------------
+
+.buttonP {
+  background-color: white;
+  color: #1565c0;
+  border: 2px solid #1565c0;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-colo 0.3 ease, transform 0.2 ease;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttonP:hover {
+  background-color: #1565c0;
+  color: white;
+  transform: translateY(-2px)
+}
+
+.buttonP:active {
+  transform: translateY(0);
+  background-color: #155195;
+}
+
+//---------------------------------------
+
+.buttonBi, .buttonS, .buttonP {
+  min-width: 120px;
+  text-align: center;
+}

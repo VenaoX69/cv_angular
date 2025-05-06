@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.resume-container {
+  /* ... tus estilos actuales ... */
+  flex-grow: 1;
+  /* Permite que el contenedor crezca para ocupar el espacio vertical disponible */
+  display: flex;
+  /* Opcional: si quieres alinear elementos dentro de resume-container verticalmente */
+  flex-direction: column;
+  /* Opcional: si quieres alinear elementos dentro de resume-container verticalmente */
+  justify-content: center;
+  /* Opcional: centra el contenido verticalmente dentro de resume-container */
+  align-items: center;
+  /* Opcional: centra el contenido horizontalmente dentro de resume-container */
+
+}
