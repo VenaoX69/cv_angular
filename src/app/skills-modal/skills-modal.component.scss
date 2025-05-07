@@ -11,10 +11,8 @@
   z-index: 9999;
 }
 
-/* Content of the modal */
 .modal-content {
   background-color: white;
-  /* Ensure background is white */
   padding: 30px;
   border-radius: 12px;
   max-width: 500px;
@@ -22,22 +20,17 @@
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333
+  color: #333;
 }
 
-.modal-content p {
-  margin-bottom: 10px;
-  font-size: 16px;
+.modal-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #a227be;
+  border-bottom: 2px solid #a227be;
+  padding-bottom: 10px;
 }
-
-.modal-content h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #15c037;
-  font-size: 20px;
-}
-
-
 
 /* Close button */
 .close {
@@ -51,9 +44,42 @@
 
 .close:hover {
   color: #ff0000;
-  /* Change color on hover */
 }
 
-a{
-  color: #15c037;
+/* Skills list */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Skills List Item */
+.skills-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  background-color: #f7f5fa;
+  border-left: 4px solid #a227be;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease, transform 0.2s ease-in-out;
+  /* Added transition for transform */
+}
+
+/* Hover effect for skills list item */
+.skills-list li:hover {
+  background-color: #f0ebf6;
+  transform: scale(1.02);
+  /* Scale effect on hover */
+}
+
+.skills-list i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.skills-list span {
+  font-size: 16px;
+  color: #444;
 }

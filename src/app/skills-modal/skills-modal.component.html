@@ -1,10 +1,11 @@
 <div class="modal" *ngIf="showModal">
   <div class="modal-content">
+    <h2 class="modal-title">Skills</h2>
     <span class="close" (click)="onCloseModal()">&times;</span>
-    <ul>
+    <ul class="skills-list">
       <li *ngFor="let skill of skills">
-        <i class="{{skill.iconClass}}" [style.color]="skill.colorStyle || 'inherit'"></i>
-        {{ skill.name }}
+        <i class="{{ skill.iconClass }}" [style.color]="skill.colorStyle"></i>
+        <span>{{ skill.name }}</span>
       </li>
     </ul>
   </div>

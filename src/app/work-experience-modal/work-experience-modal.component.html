@@ -1,0 +1,11 @@
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <h2 class="modal-title" style="color: #f66707;">Work Experience</h2>
+    <span class="close" (click)="onCloseModal()">&times;</span>
+    <div *ngFor="let experience of workExperience" class="experience-card">
+      <h3>{{ experience.company }}</h3>
+      <p>{{ experience.description }}</p>
+      <small><strong>Time:</strong> {{ experience.time }}</small>
+    </div>
+  </div>
+</div>

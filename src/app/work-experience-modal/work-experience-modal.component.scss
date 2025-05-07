@@ -37,7 +37,7 @@
   font-size: 20px;
 }
 
-
+// -------------------------------------
 
 /* Close button */
 .close {
@@ -54,28 +54,53 @@
   /* Change color on hover */
 }
 
-/* Specific styling for the summary paragraph to make it look like a card */
-.modal-content p.summary {
-  margin-bottom: 10px;
-  font-size: 16px;
-  padding: 15px;
-  /* Add padding to give it space inside */
-  background-color: #f9f9f9;
-  /* Light background color */
-  border: 1px solid #ddd;
-  /* Light border */
-  border-radius: 10px;
-  /* Rounded corners for a card effect */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  /* Soft shadow */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  /* Smooth transitions */
+//-----------------------------------------------
+
+a {
+  color: #15c037;
 }
 
-/* Hover effect to enlarge and lift the card */
-.modal-content p.summary:hover {
-  transform: scale(1.05);
-  /* Slightly scale up */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  /* Increase the shadow on hover */
+//-----------------------------------------------
+
+.experience-card {
+  background-color: #f9f9f9;
+  border-left: 4px solid #f66707;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.experience-card:hover {
+  transform: scale(1.02);
+}
+
+.experience-card h3 {
+  margin: 0;
+  color: #222;
+  font-size: 18px;
+}
+
+.experience-card p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.experience-card small {
+  display: block;
+  margin-top: 10px;
+  color: #888;
+  font-size: 13px;
+}
+
+.modal-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f66707;
+  border-bottom: 2px solid #f66707;
+  padding-bottom: 10px;
 }

@@ -10,16 +10,9 @@ app-root {
 }
 
 .resume-container {
-  /* ... tus estilos actuales ... */
   flex-grow: 1;
-  /* Permite que el contenedor crezca para ocupar el espacio vertical disponible */
   display: flex;
-  /* Opcional: si quieres alinear elementos dentro de resume-container verticalmente */
   flex-direction: column;
-  /* Opcional: si quieres alinear elementos dentro de resume-container verticalmente */
   justify-content: center;
-  /* Opcional: centra el contenido verticalmente dentro de resume-container */
   align-items: center;
-  /* Opcional: centra el contenido horizontalmente dentro de resume-container */
-
 }

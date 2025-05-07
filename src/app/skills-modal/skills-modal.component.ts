@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-skills-modal',
@@ -12,10 +12,17 @@ export class SkillsModalComponent {
   @Input() showModal: boolean = false;
   @Output() closeModal = new EventEmitter<void>();
 
+  @HostListener('document:keydown.escape', ['$event'])
+  onEscapeKey(event:KeyboardEvent) {
+    if (this.showModal) {
+      this.closeModal.emit()
+    }
+  }
+
   skills = [
     { name: 'RPA with Python', iconClass: 'bi bi-robot' },
     {
-      name: 'Angular (JSX and TSX)',
+      name: 'Angular and React (JSX and TSX)',
       iconClass: 'bi bi-code-slash',
       colorStyle: '#ff0000',
     },
@@ -35,6 +42,11 @@ export class SkillsModalComponent {
       name: 'Testing: xUnit',
       iconClass: 'bi bi-check2-square',
       colorStyle: '#15c037',
+    },
+    {
+      name: 'Integrations: Paypal, leaflet, Gmail',
+      iconClass: 'bi bi-plug',
+      colorStyle: '#a227be',
     },
   ];
 

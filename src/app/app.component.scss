@@ -1,14 +1,22 @@
+/* Profile Photo */
 .profile-photo img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  /* Hace que la imagen sea un círculo */
   object-fit: cover;
-  /* Asegura que la imagen cubra el área sin deformarse */
 }
 
-//-------------------------------------
+/* Container Styling */
+.content-container {
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
 
+/* Resume Section */
 .resume-container {
   max-width: 600px;
   margin: 20px auto;
@@ -16,8 +24,7 @@
   line-height: 1.6;
 }
 
-// ---------------------------------
-
+/* Social Links */
 .social-links {
   display: flex;
   gap: 15px;
@@ -29,14 +36,19 @@
   text-decoration: none;
   color: #1565c0;
   font-weight: bold;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.social-links a:hover {
+  transform: scale(1.05);
+  color: #0d47a1;
+  /* Opcional: tono más oscuro al hacer hover */
 }
 
 .social-links a.git {
   color: black;
 }
 
-//--------------------------------------
-
+/* Header Section */
 .header-section {
   display: flex;
   align-items: flex-start;
@@ -44,24 +56,38 @@
   gap: 10px;
 }
 
-//--------------------------------------
-
+/* Name and Links */
 .name-and-links {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  /* Cambiado de 'center' a 'flex-start' */
+  margin-left: 10px;
+  /* Opcional, puedes aumentar si lo quieres aún más a la derecha */
 }
 
 .name-and-links h1 {
-  margin-bottom: 0px;
+  margin-bottom: 4px;
+  /* Reducido el margen inferior para acercar al subtítulo */
+  margin-top: 0;
+  /* Asegura que no haya espacio arriba */
+}
+
+.name-and-links p {
+  margin-top: 0;
+  /* Elimina el espacio entre el título y "Software Developer" */
+  margin-bottom: 0;
+}
+
+.name-and-links h1 {
+  margin-bottom: 0;
 }
 
 .git {
   color: black;
 }
 
-//------------------------------------------
-
+/* Button Group */
 .button-group {
   display: flex;
   justify-content: center;
@@ -70,87 +96,135 @@
   margin: 20px 0;
 }
 
-//------------------------------------------
-
-.buttonBI {
+/* Base Button Style */
+.buttonBI,
+.buttonS,
+.buttonP,
+.buttonWE {
   background-color: white;
-  color: #1e9517;
-  border: 2px solid #1e9517;
   border-radius: 8px;
   padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-colo 0.3 ease, transform 0.2 ease;
   margin: 15px 0;
+  min-width: 120px;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* BI Button */
+.buttonBI {
+  color: #1e9517;
+  border: 2px solid #1e9517;
 }
 
 .buttonBI:hover {
   background-color: #1e9517;
   color: white;
-  transform: translateY(-2px)
+  transform: translateY(-2px);
 }
 
 .buttonBI:active {
-  transform: translateY(0);
   background-color: #157a12;
+  transform: translateY(0);
 }
 
-// ---------------------------------------
-
+/* S Button */
 .buttonS {
-  background-color: white;
   color: #a227be;
   border: 2px solid #a227be;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-colo 0.3 ease, transform 0.2 ease;
-  margin: 15px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .buttonS:hover {
   background-color: #a227be;
   color: white;
-  transform: translateY(-2px)
+  transform: translateY(-2px);
 }
 
 .buttonS:active {
-  transform: translateY(0);
   background-color: #831d9a;
+  transform: translateY(0);
 }
 
-// ----------------------------------------
-
+/* P Button */
 .buttonP {
-  background-color: white;
   color: #1565c0;
   border: 2px solid #1565c0;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-colo 0.3 ease, transform 0.2 ease;
-  margin: 15px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .buttonP:hover {
   background-color: #1565c0;
   color: white;
-  transform: translateY(-2px)
+  transform: translateY(-2px);
 }
 
 .buttonP:active {
-  transform: translateY(0);
   background-color: #155195;
+  transform: translateY(0);
 }
 
-//---------------------------------------
+/* WE Button */
+.buttonWE {
+  color: #f77010;
+  border: 2px solid #f77010;
+}
 
-.buttonBi, .buttonS, .buttonP {
-  min-width: 120px;
+.buttonWE:hover {
+  background-color: #f77010;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.buttonWE:active {
+  background-color: #e76000;
+  transform: translateY(0);
+}
+
+/* Download Button - más pequeño */
+.buttonDownload {
+  background-color: white;
+  border-radius: 50%;
+  /* Redondear el botón completamente */
+  padding: 5px;
+  /* Reduce aún más el padding */
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  /* Elimina el margen */
+  min-width: 40px;
+  /* Reduce el tamaño mínimo */
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Deja la sombra, si deseas un efecto de profundidad */
+  border: none;
+  /* Elimina el borde */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  /* Tamaño de fuente más pequeño */
+}
+
+/* Ajustar el tamaño del icono */
+.buttonDownload i {
+  font-size: 16px;
+  /* Tamaño pequeño para el icono */
+}
+
+/* Download Button Hover */
+.buttonDownload:hover {
+  background-color: #28a745;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Download Button Active */
+.buttonDownload:active {
+  background-color: #218838;
+  transform: translateY(0);
 }

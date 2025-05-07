@@ -1,9 +1,10 @@
 <div class="modal" *ngIf="showModal">
   <div class="modal-content">
+    <h2 class="modal-title" style="color: #1565c0;">Projects</h2>
     <span class="close" (click)="onCloseModal()">&times;</span>
-    <ul>
+    <ul class="projects-list">
       <li *ngFor="let project of projects">
-        <strong>{{project.name}}:</strong> {{project.description}}
+        <strong>{{ project.name }}:</strong> {{ project.description }}
       </li>
     </ul>
   </div>

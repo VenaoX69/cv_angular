@@ -1,40 +1,66 @@
 <div class="resume-container">
+  <div class="content-container">
+    <div class="header-section">
+      <div class="profile-photo">
+        <img [src]="photoUrl" alt="Photo">
+      </div>
+      <a class="buttonDownload"
+        href="src\assets\documentos\CV_DanielRivera.pdf"
+        download="Daniel_Henao_CV.pdf"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Descargar hoja de vida">
+        <i class="bi bi-download"></i>
+      </a>
 
-  <div class="header-section">
-    <div class="profile-photo">
-      <img [src]="photoUrl" alt="Photo">
-    </div>
 
-    <div class="name-and-links">
-      <h1 style="color: darkolivegreen;">{{name}}</h1>
-      <div class="social-links">
-        <a href="{{githubUrl}}" target="_blank" class="git">
-          <i class="fa fa-github git"></i> GitHub
-        </a>
-        <a href="{{linkedinUrl}}" target="_blank">
-          <i class="fa fa-linkedin"></i> LinkedIn
-        </a>
+
+      <div class="name-and-links">
+        <h1 style="color: darkolivegreen;">{{name}}</h1>
+        <p>Software Developer</p>
+        <div class="social-links">
+          <a href="{{githubUrl}}" target="_blank" class="git">
+            <i class="fa fa-github git"></i> GitHub
+          </a>
+          <a href="{{linkedinUrl}}" target="_blank">
+            <i class="fa fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
       </div>
     </div>
+
+    <div class="button-group">
+      <button class="buttonBI" (click)="onShowModalBasicInf()">
+        <i class="bi bi-person-fill"></i> Basic Info
+      </button>
+      <button class="buttonS" (click)="onShowModalSkills()">
+        <i class="bi bi-lightbulb-fill"></i> Skills
+      </button>
+      <button class="buttonP" (click)="onShowModalProjects()">
+        <i class="bi bi-folder-fill"></i> Projects
+      </button>
+      <button class="buttonWE" (click)="onShowModalWorkExperience()">
+        <i class="bi bi-briefcase-fill"></i> Work Experience
+      </button>
+    </div>
+
+    <app-basic-info-modal
+    [showModal]="showModalBasicInf"
+    (closeModal)="onCloseModalBasicInf()"
+    ></app-basic-info-modal>
+    <app-skills-modal
+    [showModal]="showModalSkills"
+    (closeModal)="onCloseModalSkills()"
+    ></app-skills-modal>
+    <app-projects-modal
+    [showModal]="showModalProjects"
+    (closeModal)="onCloseModalProjects()"
+    ></app-projects-modal>
+    <app-work-experience-modal
+    [showModal]="showModalWorkExperience"
+    (closeModal)="onCloseModalWorkExperience()"
+    ></app-work-experience-modal>
   </div>
 
-  <div class="button-group">
-    <button class="buttonBI" (click)="onShowModalBasicInf()">Basic Info</button>
-    <button class="buttonS" (click)="onShowModalSkills()">Skills</button>
-    <button class="buttonP" (click)="onShowModalProjects()">Projects</button>
-  </div>
-
-  <app-basic-info-modal
-  [showModal]="showModalBasicInf"
-  (closeModal)="onCloseModalBasicInf()"
-  ></app-basic-info-modal>
-  <app-skills-modal
-  [showModal]="showModalSkills"
-  (closeModal)="onCloseModalSkills()"
-  ></app-skills-modal>
-  <app-projects-modal
-  [showModal]="showModalProjects"
-  (closeModal)="onCloseModalProjects()"
-  ></app-projects-modal>
 
 </div>
