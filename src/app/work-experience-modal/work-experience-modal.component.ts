@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-work-experience-modal',
@@ -11,12 +11,6 @@ import { Component, EventEmitter, HostListener, Input, Output } from '@angular/c
 export class WorkExperienceModalComponent {
   @Input() showModal: boolean = false;
   @Output() closeModal = new EventEmitter<void>();
-  @HostListener('document: keydown.escape', ['$event'])
-  onEscapeKey(event: KeyboardEvent) {
-    if (this.showModal){
-      this.closeModal.emit()
-    }
-  }
 
   workExperience = [
     {
